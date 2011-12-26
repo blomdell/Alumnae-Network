@@ -1,0 +1,27 @@
+<div id="top-navigation" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 25px; background: #333; color: white; font-size: 12px; font-family: tahoma">
+my top navigation
+</div>
+
+<div id="wrapper" style="position: relative; margin-top: 100px; width: 100%; text-align:center">
+	<div id="user_profile" style=" width: 400px; height: 100px; border: 1px solid #888; text-align:left; border-radius: 5px"> 
+		<div id="user_phot" style="float:left; width: 86px; height: 86px; margin-top: 7px; margin-left:7px; background: white; border-radius: 5px;">
+			<img src="http://www.gravatar.com/avatar/cef24a5764a97e898be541a226cd6cf6" style='margin-left: 3px; margin-top: 3px; border-radius: 5px'> <!-- replace with Gravatar API call --->
+		</div>
+		<div id="user_quickbox" style="float: left; margin-left:5px; font-size: 12px; font-family: tahoma">
+			<p style="font-size: 16px;font-weight:bold;"> <%= @user.name %></p>
+			<%= @user.title %> | <%= @user.organization %>  <br>
+			<%= @user.country %>  <br>
+			#NBR, #EMAIL
+		</div>
+	</div>
+	<div id="user_experience" style="float: left; margin-top:10px; padding: 5px; width: 120px; height: 200px; border: 1px solid #888; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma"> 
+		Experience and Knowledge
+	</div>
+	<div id="user_background" style="float: left; padding: 5px; margin-top:10px; margin-left:10px;width: 250px; height: 200px; border: 1px solid #888; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma"> 
+		Previous positions
+	</div>
+</div>
+
+<div id="about-wrapper"style="clear: both; position: fixed; bottom: 0px; left: 0px; height: 50px; width: 100%; background: #999; color: white; font-size: 12px; font-family: tahoma; text-align: left">
+	<div id="about"> About us </div>
+</div>
