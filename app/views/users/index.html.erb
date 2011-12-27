@@ -1,15 +1,13 @@
-<div id="top-navigation" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 25px; background: #333; color: white; font-size: 12px; font-family: tahoma">
-my top navigation
-</div>
+<%= render 'shared/header' %>
 
 <div id="wrapper" style="position: relative; margin-top: 100px; width: 100%; text-align:center">
 
 	
 	<div style="background: white; style: float; text-align: left">
 		<% @users.each do |user| %> 
-			<%= user.name %> 
-			<%= link_to 'Show', user %>
-			<%= link_to 'Edit User', edit_user_path(user) %>
+			<b> <%= user.name %> </b>
+			<%= link_to 'Show', user %> | 
+			<%= link_to 'Edit', edit_user_path(user) %> | 
 			<%= link_to 'Destroy', user, :method => :delete %>
 			<br>
 		<% end %>
@@ -18,6 +16,4 @@ my top navigation
 
 
 
-<div id="about-wrapper"style="clear: both; position: fixed; bottom: 0px; left: 0px; height: 50px; width: 100%; background: #999; color: white; font-size: 12px; font-family: tahoma; text-align: left">
-	<div id="about"> About us </div>
-</div>
+<%= render 'shared/footer' %>

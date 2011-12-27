@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'gravtastic'
 
+gem 'gravatar_image_tag'
+
 gem 'json'
 
 # Gems used only for assets and not required
