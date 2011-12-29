@@ -13,12 +13,15 @@
 ActiveRecord::Schema.define(:version => 20111221033746) do
 
   create_table "users", :force => true do |t|
+    t.string   "token"
+    t.string   "provider"
     t.string   "uid"
     t.string   "name"
-    t.string   "area"
+    t.string   "email"
+    t.string   "number"
+    t.string   "location"
     t.string   "program"
     t.string   "organization"
-    t.string   "country"
     t.string   "title"
     t.string   "twitterid"
     t.string   "linkedinid"

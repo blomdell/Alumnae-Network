@@ -1,0 +1,13 @@
+development: &defaults
+
+app_id: #your app_id
+client_id: 322271291124131
+client_secret: 853334aa6575296329935f2c79653f63
+scope: user_about_me, user_education_history, user_hometown,user_location, user_work_history, email, user_mobile_phone
+page_id: #the facebook page id that you wish you pull events from
+
+test:
+<<: *defaults
+
+production:
+<<: *defaults

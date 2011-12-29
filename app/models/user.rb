@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 #	 :uid
 # 	 :name
-#	 :area
+# 	 :email
+#	 :location
 # 	 :program
 #	 :organization
 # 	 :title
@@ -9,7 +10,14 @@ class User < ActiveRecord::Base
 # 	 :linkedinid
 # 	 :about
 
+	def self.create_with_omniauth(auth)
+  		create! do |user|
+    		user.provider = auth["provider"]
+    		user.uid = auth["uid"]
+    		user.name = auth["info"]["name"]
+    		user.twitterid = auth["info"]["urls"]["Twitter"]
+    		user.location = auth["info"]["location"]
+  		end
+	end
 
-include Gravtastic
-  gravtastic
 end

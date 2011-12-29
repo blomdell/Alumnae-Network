@@ -7,9 +7,11 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 
-gem 'gravtastic'
-
 gem 'gravatar_image_tag'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
+gem 'fb_graph'
 
 gem 'json'
 
