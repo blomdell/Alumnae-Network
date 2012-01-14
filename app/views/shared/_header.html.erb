@@ -4,7 +4,7 @@
 	<%= gravatar_image_tag(current_user.email, :alt => current_user.name, :gravatar => {:size => 30})%>
 	<%= link_to "Sign Out", signout_path %>
 <% else %>
-	<%= link_to 'login with Twitter', '/auth/twitter' %>
+	<%= link_to image_tag('/assets/twitter_signin.png', :border => 0), '/auth/twitter' %>
 <% end %>
 	</div>
 </div>

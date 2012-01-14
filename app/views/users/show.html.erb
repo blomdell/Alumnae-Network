@@ -2,7 +2,7 @@
 
 <div id="wrapper" style="position: relative; margin-top: 100px; width: 100%; text-align:center">
 	<div id="user_profile" style=" width: 400px; height: 120px; border: 1px solid #999; text-align:left; border-radius: 5px; background: #999""> 
-		<div id="user_phot" style="float:left; width: 80px; height: 80px; padding: 3px;  margin-top: 7px; margin-left:7px; background: white; border-radius: 5px;">
+		<div id="user_phot" style="float:left; width: 80px; height: 80px; padding: 3px;  margin-top: 18px; margin-left:7px; background: white; border-radius: 5px;">
 			<%= gravatar_image_tag(@user.email, :alt => @user.name)%>
 		</div>
 		<div id="user_quickbox" style="float: left; margin-left:5px; font-size: 12px; font-family: tahoma">
@@ -18,7 +18,7 @@
 	<div id="user_background" style="float: left; padding: 5px; margin-top:10px; margin-left:10px;width: 250px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999""> 
 		<b style='font-size: 16px;font-weight:bold'> Latest Posts </b> <br>
 		<% @user.posts.each do |post| %>
-			<b><%= post.title %></b> - <%= post.content %><br>
+			<b><%= link_to post.title, post %></b> - <%= post.content %><br>
 		<% end %>
 	</div>
 </div>
