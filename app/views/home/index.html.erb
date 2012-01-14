@@ -1,14 +1,6 @@
 <%= render 'shared/header' %>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=322271291124131";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <div id="wrapper" style="position: relative; margin-top: 100px; width: 100%; text-align:center">
-	<div style='float:left' class="fb-like" data-href="http://bit.ly/uIr5J2" data-send="false" data-width="200" data-show-faces="true" data-action="recommend" data-font="tahoma"></div>
+	
 	<div id="signup" style="float: left; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999"> 
 		<form>
 			LOGO
@@ -17,7 +9,12 @@
 	<div id="login" style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999""> 
 		<% if current_user %>
 			<%= link_to "Show all users", users_path %> <br>
-			<%= link_to 'Show discussions', posts_path %>
+			<%= link_to 'Show discussions', posts_path %> <br>
+			Calendar <br>
+			Jobs <br>
+			News <br>
+			Contact <br>
+			
 		<% else %>
 			Welcome to our Alumnae Network, please sign in
 		<% end %>

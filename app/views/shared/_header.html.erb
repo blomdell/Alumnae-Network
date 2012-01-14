@@ -1,5 +1,14 @@
 <div id="top-navigation" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 40px; background: #888; color: white; font-size: 12px; font-family: tahoma; text-align: right;">
 	<div style='margin-right: 5px; margin-top: 5px'>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=322271291124131";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div style='float:left; margin-left: 10px' class="fb-like" data-href="http://bit.ly/uIr5J2" data-send="false" data-width="200" data-show-faces="true" data-action="recommend" data-font="tahoma"></div>
 <% if current_user %>
 	<%= gravatar_image_tag(current_user.email, :alt => current_user.name, :gravatar => {:size => 30})%>
 	<%= link_to "Sign Out", signout_path %>

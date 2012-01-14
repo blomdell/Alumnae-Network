@@ -1,7 +1,10 @@
 AlumnaeNetwork::Application.routes.draw do
-  resources :posts
-
-  get "home/index"
+  	
+  	resources :posts do 
+		resources :comments
+	end
+	
+  	get "home/index"
 
 	resources :users 
 	resources :shared
@@ -10,6 +13,5 @@ AlumnaeNetwork::Application.routes.draw do
 	match "/signout" => "sessions#destroy", :as => :signout
 
 	root :to => 'home#index'
-
 
 end

@@ -14,6 +14,24 @@
   <b>Content:</b>
   <%= @post.content %>
 </p>
+<hr width='30%'>
+<b>Comments</b><br>
+<% @post.comments.each do |comment| %>
+	<%= comment.content %> <br>
+<% end %>
+
+
+<h2> Add a comment </h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area(:content, :cols => 25, :rows => 10) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
