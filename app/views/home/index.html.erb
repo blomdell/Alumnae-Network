@@ -6,7 +6,7 @@
 			LOGO
 		</form>
 	</div>
-	<div id="login" style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999""> 
+	<div id="login" style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999"> 
 		<% if current_user %>
 			<%= link_to "Show all users", users_path %> <br>
 			<%= link_to 'Show discussions', posts_path %> <br>
@@ -19,7 +19,7 @@
 		<% end %>
 	</div>
 	<% if current_user %>
-	<div id="news" style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999""> 
+	<div id="news" style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999"> 
 		<b>News </b><br>
 		<% print '------------------' %>
 		<% Publication.limit(3).order("created_at DESC").each do |p| %>
@@ -28,7 +28,12 @@
 				<%= p.content %> 
 			</p>
 		<% end %>
+	</div>	
+	<div id='calendar' style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999"> 
+		<iframe style='margin-top:5px; margin-left: 5px' src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=190&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=hj157te7u41dq60c6v125kfcrk%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FStockholm" style=" border-width:0 " width="190" height="190" frameborder="0" scrolling="no"></iframe>
 	</div>
 	<% end %>
 </div>
+
+
 <%= render 'shared/footer' %>
