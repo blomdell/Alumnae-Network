@@ -24,7 +24,7 @@
 		<% print '------------------' %>
 		<% Publication.limit(3).order("created_at DESC").each do |p| %>
 			<p>
-				<i><%= p.title %></i>, <%= p.date %>  <br>
+				<i><%= link_to p.title, p %></i>, <%= p.date %>  <br>
 				<%= p.content %> 
 			</p>
 		<% end %>
