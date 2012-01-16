@@ -12,14 +12,21 @@
 			<%= link_to 'Show discussions', posts_path %> <br>
 			Calendar <br>
 			Jobs <br>
-			News <br>
+			<%= link_to 'News', publications_path %>  <br>
 			Contact <br>
-			
 		<% else %>
 			Welcome to our Alumnae Network, please sign in
 		<% end %>
 	</div>
+	<div id="news" style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999""> 
+		<b>News </b><br>
+		<% print '------------------' %>
+		<% Publication.limit(3).order("created_at DESC").each do |p| %>
+			<p>
+				<i><%= p.title %></i>, <%= p.date %>  <br>
+				<%= p.content %> 
+			</p>
+		<% end %>
+	</div>
 </div>
-
-
 <%= render 'shared/footer' %>

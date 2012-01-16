@@ -1,0 +1,24 @@
+<%= render 'shared/header' %>
+<div id="wrapper" style="position: relative; margin-top: 100px; width: 100%; text-align:left">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @publication.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @publication.content %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @publication.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>
+</div>
+<%= render 'shared/footer' %>

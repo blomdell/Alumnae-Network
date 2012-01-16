@@ -3,9 +3,9 @@
 	<% if current_user %>
 		<%= link_to 'Discussions', posts_path %> |
 	<% end %>
-	About us
+	About us | <%= link_to 'Home', '/' %> |
 	<% if current_user %>
-		| <%= link_to 'Profile', current_user %>
+		<%= link_to 'Profile', current_user %>
 	<% end %>
 	</div>
 </div>
