@@ -18,6 +18,7 @@
 			Welcome to our Alumnae Network, please sign in
 		<% end %>
 	</div>
+	<% if current_user %>
 	<div id="news" style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999""> 
 		<b>News </b><br>
 		<% print '------------------' %>
@@ -28,5 +29,6 @@
 			</p>
 		<% end %>
 	</div>
+	<% end %>
 </div>
 <%= render 'shared/footer' %>
