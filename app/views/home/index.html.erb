@@ -10,7 +10,6 @@
 		<% if current_user %>
 			<%= link_to "Show all users", users_path %> <br>
 			<%= link_to 'Show discussions', posts_path %> <br>
-			Calendar <br>
 			Jobs <br>
 			<%= link_to 'News', publications_path %>  <br>
 			Contact <br>
@@ -29,8 +28,8 @@
 			</p>
 		<% end %>
 	</div>	
-	<div id='calendar' style="float: left; margin-left: 10px; width: 200px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999"> 
-		<iframe style='margin-top:5px; margin-left: 5px' src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=190&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=hj157te7u41dq60c6v125kfcrk%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FStockholm" style=" border-width:0 " width="190" height="190" frameborder="0" scrolling="no"></iframe>
+	<div id='calendar' style="float: left; margin-left: 10px; width: 400px; height: 200px; border: 1px solid #999; text-align:left; border-radius: 5px; font-size: 12px; font-family: tahoma; background: #999"> 
+		<iframe style='margin-top:5px; margin-left: 5px' src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=190&amp;wkst=2&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=hj157te7u41dq60c6v125kfcrk%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FStockholm" style=" border-width:0 " width="390" height="190" frameborder="0" scrolling="no"></iframe>
 	</div>
 	<% end %>
 </div>
