@@ -1,9 +1,9 @@
 <div id="about-wrapper"style="clear: both; position: fixed; bottom: 0px; left: 0px; height: 50px; width: 100%; background: #999; color: white; font-size: 12px; font-family: tahoma; text-align: center">
 	<div id="about"> 
 	<% if current_user %>
-		<%= link_to 'Discussions', posts_path %> |
+		<%= link_to 'Discussions', posts_path %>
 	<% end %>
-	  About | <%= link_to 'Home', '/' %> |
+	  | <%= link_to 'Home', '/' %> |
 	<% if current_user %>
 		<%= link_to 'Profile', current_user %>
 	<% end %>

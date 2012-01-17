@@ -14,7 +14,8 @@
 			<%= link_to 'News', publications_path %>  <br>
 			Contact <br>
 		<% else %>
-			Welcome to our Alumnae Network, please sign in
+			Welcome to our Alumnae Network, please sign in<br>
+			<%= link_to 'facebook', '/auth/facebook' %>
 		<% end %>
 	</div>
 	<% if current_user %>
